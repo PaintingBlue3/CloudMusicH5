@@ -1,0 +1,189 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.header_big {
+    width: 100%;
+    position: fixed;
+    padding-bottom: 15px;
+    background-color: rgb(255, 255, 255,0.8);
+}
+
+.header {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.header h3 {
+    padding-top: 10px;
+    line-height: 50px;
+}
+
+.btns {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 110px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid rgb(212, 212, 212);
+    float: left;
+    background-color: rgb(255, 255, 255);
+}
+
+.btns img {
+    position: relative;
+    top: 6px;
+    width: 25px;
+}
+
+#btn_back {
+    width: 23px;
+    padding-right: 10px;
+    padding-left: 7px;
+    border-right: 1px solid rgb(212, 212, 212);
+}
+
+#btn_home {
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.btn {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+.space {
+    display: block;
+    width: 100px;
+    height: 85px;
+}
+
+.head {
+    padding-top: 10px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#cover {
+    object-fit: cover;
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+}
+
+.head {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.infor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90px;
+    width: 45%;
+}
+
+#bg {
+    object-fit: cover;
+    position: fixed;
+    left: -15px;
+    top: -15px;
+    z-index: -10;
+    width: 110%;
+    height: 110%;
+    filter: blur(15px);
+}
+
+#bg_cover {
+    display: block;
+    position: fixed;
+    top: 0px;
+    z-index: -9;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-color: black;
+}
+
+#title {
+    color: white;
+    font-size: 20px;
+}
+
+#content {
+    color: rgb(142, 142, 142);
+    font-size: 12px;
+}
+
+.listmusic {
+    margin-top: 20px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+.playall img {
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+}
+
+.playall {
+    display: flex;
+    align-items: center;
+}
+
+#playall {
+    font-size: 18px;
+}
+
+#all {
+    padding-left: 5px;
+    color: rgb(185, 185, 185);
+}
+
+.musicBox img {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 8px;
+    width: 30px;
+    height: 30px;
+}
+
+.musicBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box {
+    width: 70%;
+}
+
+.num {
+    font-size: 18px;
+    width: 50px;
+    text-align: center;
+    padding-bottom: 8px;
+    color: gray;
+}
+
+.title {
+    font-size: 17px;
+}
+
+.content {
+    color: gray;
+    font-size: 12px;
+}
+
+.musicBox {
+    padding-top: 10px;
+    padding-bottom: 12px;
+}
