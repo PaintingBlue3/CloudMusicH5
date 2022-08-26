@@ -104,9 +104,11 @@ async function search(value) {
     }
 
     const boxs = document.querySelectorAll(".searchFeedback")
+    console.log(boxs);
     for (let i = 0; i < boxs.length; i++) {
         boxs[i].addEventListener("click", async() => {
-            window.localStorage.setItem("cloudId", res.resule.songs[i].id)
+            window.localStorage.setItem("cloudId", res.result.songs[i].id)
+            window.location.href="../html/song.html"
         })
     }
 }
