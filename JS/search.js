@@ -10,7 +10,6 @@ X.addEventListener("click", () => {
     search_box.value = ""
 })
 
-
 async function hotRank() {
     const hotRank = await fetch("http://121.40.19.111:3000/search/hot/detail", {
         method: "GET",
@@ -53,26 +52,24 @@ async function hotRank() {
     const titles = document.querySelectorAll(".title")
     const boxs = document.querySelectorAll(".hr_content")
     for (let i = 0; i < boxs.length; i++) {
-        boxs[i].addEventListener("click", async () => {
+        boxs[i].addEventListener("click", async() => {
             search(titles[i].innerHTML)
         })
     }
 }
-
-hotRank()
 
 async function search(value) {
     search_box.value = value
     const search = await fetch("http://121.40.19.111:3000/search?keywords=" + value)
     const res = await search.json()
     console.log(res.result.songs);
-    if(value != "") {
+    if (value != "") {
         X.style.display = "block";
     }
 
     hot_rank.style.display = "none"
     searchFeedback.style.display = "block"
-    
+
     // dom操作
     while (searchFeedback.hasChildNodes()) //清屏
     {
@@ -105,6 +102,13 @@ async function search(value) {
         searchFeedback.appendChild(bigBox)
 
     }
+
+    const boxs = document.querySelectorAll(".searchFeedback")
+    for (let i = 0; i < boxs.length; i++) {
+        boxs[i].addEventListener("click", async() => {
+            window.localStorage.setItem("cloudId", res.resule.songs[i].id)
+        })
+    }
 }
 
 async function keydown(event) {
@@ -118,3 +122,4 @@ async function keydown(event) {
 }
 
 document.addEventListener("keydown", keydown);
+hotRank()
